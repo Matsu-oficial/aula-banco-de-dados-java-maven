@@ -9,6 +9,11 @@ public class Despesa {
     private String descricao;
     private Categoria categoria;
 
+    public Long getId() {
+        return id;
+    }
 
-
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
