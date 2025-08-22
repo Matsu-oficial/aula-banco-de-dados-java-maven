@@ -40,7 +40,7 @@ public class CategoriaDAO {
             }
         }
         catch(SQLException e) {
-            System.out.println("erro ao listar categoria\n" + e);
+            System.out.println("Erro ao listar categoria\n" + e);
         }
         return lista;
     }

@@ -1,0 +1,19 @@
+package br.fiap.modelo;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class TesteDespesa {
+    public static void main(String[] args) {
+        DespesaDAO dao = new DespesaDAO();
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        Despesa despesa = new Despesa();
+
+        despesa.setDescricao("Viagem de uber para fiap");
+        despesa.setValor(2500.00);
+        despesa.setData(LocalDate.parse("21/08/2025", f));
+        despesa.setCategoria(new Categoria(1L, ""));
+        dao.inserir(despesa);
+    }
+}
